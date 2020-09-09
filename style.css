@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url(img/12_col.gif) center top repeat-y;
+	background-size: 90%;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto; /* top/bottm left/right */
+	display: grid;	
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"header header header header"
+		"box-1 box-2 box-2 box-3"
+		"content content content sidebar"
+		"footer footer footer footer";
+
+	gap: 2%;
+}
+
+header,
+.box-1,
+.box-2,
+.box-3,
+.content,
+aside,
+footer,
+.section-1,
+.section-2,
+.section-3,
+.section-4
+ {
+	border: 1px solid #333;
+	height: 150px;
+}
+header {
+	grid-area: header;
+}
+.box-1{
+	grid-area: box-1;
+	justify-self: start;
+	width: 62%;
+}
+.box-2{
+	grid-area: box-2;
+	justify-self: center;
+	width: 135%;
+
+}
+.box-3{
+	grid-area: box-3;
+	justify-self: end;
+	width: 62%;
+}
+.content {
+	grid-area: content;
+}
+aside {
+	grid-area: sidebar;
+}
+
+footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto;
+	grid-area: footer;
+
+	gap: 2%;
+	height: auto;
+	padding: 5px;
+}
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+	margin: 5px 0;
+}
+
+
+
+	/* @media query */
+
+/* midre desktop skärmar 960-1200 */
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+	.container {
+		width: 90%;
+		margin: 0 auto; /* top/bottm left/right */
+		display: grid;	
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"header header header header"
+			"box-1 box-2 box-2 box-3"
+			"content content content sidebar"
+			"footer footer footer footer";
+	
+		gap: 2%;
+
+	}
+}
+/* Tablet skärmar 768-960 */
+@media screen and (min-width: 768px) and (max-width: 960px){
+	.container {
+		width: 90%;
+		margin: 0 auto; /* top/bottm left/right */
+		display: grid;	
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"header header header header"
+			"box-1 box-2 box-2 box-3"
+			"content content content sidebar"
+			"footer footer footer footer";
+	
+		gap: 2%;
+
+	}
+}
+
+/* Mobil skärmar max 768 */
+@media screen and (max-width: 768px){
+	.container {
+		width: 90%;
+		margin: 0 auto; /* top/bottm left/right */
+		display: grid;	
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas:
+			"header header header header"
+			"box-1 box-2 box-2 box-3"
+			"content content content sidebar"
+			"footer footer footer footer";
+	
+		gap: 2%;
+
+	}
+}
+
+
