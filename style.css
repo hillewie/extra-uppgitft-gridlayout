@@ -175,16 +175,48 @@ footer {
 @media screen and (max-width: 768px){
 	.container {
 		display: grid;	
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(6, 1fr);
 		grid-template-areas:
-			"header header header header"
-			"box-1 box-2 box-2 box-3"
-			"content content content sidebar"
-			"footer footer footer footer";
+			"header"
+			"box-1" 
+			"box-2" 
+			"box-3"
+			"content"
+			"sidebar"
+			"footer"
+			"footer"
+			"footer"
+			"footer";
 	
-		gap: 2%;
-
+		gap: 1%;
+	}
+	.box-1{
+		grid-area: box-1;
+		width: 100%;
+	}
+	.box-2{
+		grid-area: box-2;
+		width: 100%;
+	}
+	.box-3{
+		grid-area: box-3;
+		width: 100%;
+	}
+	footer {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-area: footer;
+		grid-template-areas: 
+		"section-1" 
+		"section-2"
+		"section-3"
+		"section-4";
+		
+		height: auto;
+		gap: 1%;
+		padding: 5px;
 	}
 }
 
