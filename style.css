@@ -22,6 +22,7 @@ body {
 	margin-left: 6%;
 	margin-right: 6%;
 	margin-top: 5px;
+	height: 93vh;
 }
 
 header,
@@ -37,25 +38,65 @@ footer,
 .section-4
  {
 	border: 1px solid #333;
-	height: 150px;
+}
+.content-section1,
+.content-section2,
+.content-section3,
+.content-section4,
+.content-section5,
+.content-section6
+{
+	border: 1px solid black;
+	width: 250px;
+	height: 80px;
+	margin: 5px;
+}
+.content-section1,
+.content-section2,
+.content-section3,
+.content-section4,
+.content-section5,
+.content-section6 {
+	flex-basis: auto;
+	flex-grow: 1;
 }
 header {
 	grid-area: header;
+	background-color: beige;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100px;
 }
 .box-1{
 	grid-area: box-1;
+	height: 100px;
 }
 .box-2{
 	grid-area: box-2;
+	height: 100px;
 }
 .box-3{
 	grid-area: box-3;
+	height: 100px;
 }
 .content {
 	grid-area: content;
+	background-color: beige;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 aside {
 	grid-area: sidebar;
+	background-color: beige;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: center;
+	padding-top: 20px;
 }
 
 footer {
@@ -74,8 +115,20 @@ footer {
 .section-3,
 .section-4 {
 	margin: 5px 0;
+	height: 100px;
 }
-
+.header-button {
+	margin-left: 35px; 
+	margin-right: 5px;
+}
+.header-button4 {
+	margin-left: auto;
+	margin-right: 50px;
+}
+.sidebar-button {
+	width: 90%;
+	margin: 5px;
+}
 	/* @media query */
 
 /* midre desktop skärmar 960-1200 */
